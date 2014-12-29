@@ -43,10 +43,6 @@ find_excludes = [
     'tests',
 ]
 
-py_modules = []
-
-package_data = {}
-
 setup(
     name='example',
     version=find_version('example', '__init__.py'),
