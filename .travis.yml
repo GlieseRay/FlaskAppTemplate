@@ -1,0 +1,20 @@
+language: python
+python:
+  - "2.7"
+
+env:
+    - FLASK=0.9
+    - FLASK=0.10
+
+install:
+    - pip install -q Flask==$FLASK --use-mirrors
+    - pip install -q coverage --use-mirrors
+    - pip install -r requirements.txt --use-mirrors
+
+script:
+    - python setup.py nosetests
+
+notifications:
+  email:
+    recipients:
+      - gliese.q@gmail.com
